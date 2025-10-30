@@ -32,7 +32,7 @@ export const siteConfig = {
         name: 'ERP System Revamp',
         description: "I led the redevelopment of an existing ERP system, migrating it from legacy PHP code to Laravel. The new version was redesigned with improved architecture, cleaner codebase, and enhanced functionality to support modern business workflows. The system is now integrated with IoT devices, enabling real-time monitoring and control through MQTT and Socket.io. Development includes refactoring old modules, optimizing database structure, and continuously adding new features and integrations.",
         images: [
-          '/public/images/project1.png'
+          '/images/project1.png'
         ],
         skills: ['Laravel', 'PostgreSQL', 'Bootstrap', 'jQuery', 'Nginx', 'AWS EC2', 'MQTT', 'Node.js', 'Socket.io'],
     },
@@ -103,8 +103,8 @@ export const siteConfig = {
         name: 'Public Registration Portal Enhancement',
         description: "I contributed to the development of a government web portal by adding a new registration feature for a public event program (such as free homecoming trips). My work included implementing backend logic for participant registration and refining the front-end interface for better usability and responsiveness.",
         images: [
-          '/public/images/project2.png',
-          '/public/images/project2-2.png'
+          '/images/project2.png',
+          '/images/project2-2.png'
         ],
         skills: ['Laravel', 'PostgreSQL', 'Tailwind Css', 'jQuery'],
     },
