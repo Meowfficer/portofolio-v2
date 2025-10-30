@@ -82,7 +82,7 @@ export const siteConfig = {
         name: 'IoT Temperature Monitoring Dashboard',
         description: "I developed a web dashboard for real-time temperature monitoring using MQTT and LoRa Gateway. My role focused on integrating the MQTT client to display sensor data dynamically and implementing cloud data transmission for centralized storage and analytics. The system visualizes live temperature readings, ensuring seamless communication between local gateways and the cloud platform.",
         images: [],
-        skills: ['Laravel', 'MQTT', 'LoRa Gateway', 'JavaScript', 'Bootstrap'],
+        skills: ['Laravel', 'MQTT', 'LoRa Gateway', 'Javascript', 'Bootstrap'],
     },
 
     {
@@ -96,7 +96,7 @@ export const siteConfig = {
         name: 'E-Commerce Backend & ERP Integration',
         description: "I developed the backend system for an e-commerce platform integrated with an existing ERP system. The project involved creating robust APIs to synchronize product, inventory, and order data between the e-commerce and ERP platforms. I also implemented secure payment gateway integrations using PayPal and Midtrans, ensuring reliable transaction handling and order tracking.",
         images: [],
-        skills: ['Laravel', 'PostgreSQL', 'REST API', 'Midtrans', 'PayPal SDK'],
+        skills: ['Laravel', 'PostgreSQL', 'REST API', 'Midtrans', 'PayPal'],
     },
 
     {
@@ -125,7 +125,7 @@ export const siteConfig = {
       title: "Software Engineer",
       dateRange: "Jun 2021 - Dec 2023",
       bullets: [
-        "Developed new modules that enhanced system usability and reduced manual processes by 40%s",
+        "Developed new modules that enhanced system usability and reduced manual processes by 40%",
         "Ensured seamless integration of features across multiple applications following internal coding standards",
         "Collaborated with QA and stakeholders to refine features and supported deployment for 20+ enterprise clients",
       ],

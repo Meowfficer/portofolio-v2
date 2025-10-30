@@ -15,9 +15,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       <li>
         <a
           href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
+          class="text-gray-700 hover:text-black transition-colors font-medium relative group"
         >
           About
+          <span 
+            class="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:left-0 group-hover:w-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          ></span>
         </a>
       </li>
       {
@@ -25,9 +29,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-black transition-colors font-medium relative group"
             >
               Projects
+              <span 
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:left-0 group-hover:w-full"
+                style={`background-color: ${siteConfig.accentColor}`}
+              ></span>
             </a>
           </li>
         )
@@ -37,9 +45,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-black transition-colors font-medium relative group"
             >
               Experience
+              <span 
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:left-0 group-hover:w-full"
+                style={`background-color: ${siteConfig.accentColor}`}
+              ></span>
             </a>
           </li>
         )
@@ -49,9 +61,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-black transition-colors font-medium relative group"
             >
               Education
+              <span 
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 group-hover:left-0 group-hover:w-full"
+                style={`background-color: ${siteConfig.accentColor}`}
+              ></span>
             </a>
           </li>
         )
