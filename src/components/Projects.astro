@@ -93,7 +93,7 @@ const projectsJson = JSON.stringify(siteConfig.projects);
         class="bg-white rounded-xl sm:rounded-2xl w-full max-w-2xl lg:max-w-4xl max-h-[90vh] overflow-y-auto mx-auto p-6 sm:p-8 relative shadow-2xl transform scale-95 transition-all duration-300"
         id="modalContent"
       >
-        {/* Carousel Simple */}
+        {/* Carousel Responsive */}
         <div id="carouselContainer" class="mb-6 relative overflow-hidden rounded-lg sm:rounded-xl bg-gray-100">
           <div id="carouselTrack" class="flex transition-transform duration-300 ease-in-out"></div>
           
@@ -130,7 +130,7 @@ const projectsJson = JSON.stringify(siteConfig.projects);
   </section>
 )}
 
-<!-- Script tetap sama -->
+<!-- Script dengan Carousel Responsive -->
 <script>
   const section = document.getElementById("projects");
   const projects = JSON.parse(section.dataset.projects);
@@ -164,23 +164,25 @@ const projectsJson = JSON.stringify(siteConfig.projects);
     
     totalSlides = images.length;
     
-    // Set fixed height untuk carousel
-    carouselContainer.classList.add('h-64', 'sm:h-80', 'md:h-96');
+    // HAPUS fixed height classes yang sebelumnya
+    carouselContainer.classList.remove('h-64', 'sm:h-80', 'md:h-96');
     
     // Set width track
     carouselTrack.style.width = `${totalSlides * 100}%`;
     
-    // Create slides
+    // Create slides dengan aspect ratio yang responsive
     images.forEach((image, index) => {
       const slide = document.createElement('div');
-      slide.className = 'w-full h-full flex-shrink-0';
+      slide.className = 'w-full flex-shrink-0';
       slide.style.width = `${100 / totalSlides}%`;
       slide.innerHTML = `
-        <img 
-          src="${image}" 
-          alt="Project image ${index + 1}" 
-          class="w-full h-full object-cover"
-        />
+        <div class="relative pt-[56.25%]"> <!-- 16:9 aspect ratio -->
+          <img 
+            src="${image}" 
+            alt="Project image ${index + 1}" 
+            class="absolute top-0 left-0 w-full h-full object-cover"
+          />
+        </div>
       `;
       carouselTrack.appendChild(slide);
     });
@@ -236,6 +238,25 @@ const projectsJson = JSON.stringify(siteConfig.projects);
   // Event listeners
   carouselPrev.addEventListener('click', prevSlide);
   carouselNext.addEventListener('click', nextSlide);
+
+  // Touch events untuk mobile
+  let startX = 0;
+  carouselContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carouselContainer.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+  });
 
   // Keyboard navigation
   document.addEventListener('keydown', (e) => {
